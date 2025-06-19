@@ -2,9 +2,9 @@
 import re
 
 def integers_in_brackets(s):
-    result = re.findall(r"[-\d]+",s)
-    #FIX THIS SHIT
-    return result
+    result = re.findall(r"-*\b\s*\d+\s*\b",s)
+
+    return list(map(lambda x : int(x),result))
 
 def main():
     test = " afd [asd] [12 ] [a34] [ -43 ]tt [+12]xxx"
