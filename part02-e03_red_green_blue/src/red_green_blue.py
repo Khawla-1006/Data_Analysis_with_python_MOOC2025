@@ -8,8 +8,8 @@ def red_green_blue(filename="src/rgb.txt"):
         colors = ref.readlines()
         colors = colors[1:]
     for color in colors:
-        c = re.search(r"[^\t]+",color)
-        k = re.sub(r"\s","\t",c.group(),count=2)
+        nc = color.strip()
+        k = re.sub(r"[^\w]+","\t",nc,count=3)
         result.append(k)
     return result
 
