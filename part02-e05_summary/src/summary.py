@@ -24,7 +24,7 @@ def summary(filename):
 def main():
     for param in sys.argv[1:]:
         t = summary(param)
-        print(f"File: {sys.argv[0]} Sum: {t[0]:.6f} Average: {t[1]:.6f} Stddev: {t[2]:.6f}")
+        print(f"File: {param} Sum: {t[0]:.6f} Average: {t[1]:.6f} Stddev: {t[2]:.6f}")
 
 if __name__ == "__main__":
     main()
